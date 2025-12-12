@@ -24,9 +24,7 @@ describe('Cypress Komutlari', () => {
         cy.title().should('contains', 'Automation') // verilen string ifadenin icerilme durumu
         
     });
-    
 
-    it('', () => {
-        
-    });
+
+   
 });
