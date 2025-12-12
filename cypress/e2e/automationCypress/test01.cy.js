@@ -30,9 +30,9 @@ describe('Cypress Komutlari', () => {
  
         cy.visit('/')  // baseUrl adresine gider
 
-        cy.url().should('equals' , 'https://uitestingplayground.com' ) // url tam esitlik kontorlu saglar
+        cy.url().should('equals' , 'https://uitestingplayground.com/' ) // url tam esitlik kontorlu saglar
         cy.url().should('include' , 'uitestingplayground' ) // url istenilen string ifadeyi iceriyor mu kontrolu saglar
-        
+
 
         
     });
