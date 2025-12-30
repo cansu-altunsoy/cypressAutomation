@@ -33,10 +33,9 @@ describe('Cypress Komutlari', () => {
         cy.url().should('equals' , 'https://uitestingplayground.com/' ) // url tam esitlik kontorlu saglar
         cy.url().should('include' , 'uitestingplayground' ) // url istenilen string ifadeyi iceriyor mu kontrolu saglar
 
-        cy.location('pathname', '/resources')
+        cy.location('pathname').should('equals', '/resources') // adres dogru mu, pathname dogru mu kontrolu yapar
 
     });
     
    
-
 });
