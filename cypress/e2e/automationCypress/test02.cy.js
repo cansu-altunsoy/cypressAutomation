@@ -17,3 +17,30 @@ context('contex Kullanimi', () => {
     });
     
 });
+
+
+
+// BeforeEach her bir it blogundan once calısan blok kullanimi ***** (İt'leri if dongusu gibi dusunur isek
+//  beforeEach her donguden once calistirdigimiz for gibi dusune biliriz.)***
+
+
+describe('', () => {
+    beforeEach(() => {
+
+        cy.visit('https://uitestingplayground.com')
+
+    });
+    it('title test', () => {
+
+        cy.title().should('eq', 'uitestingplayground')
+        cy.title().should('include', 'uitestingplayground')
+    
+    });
+
+    it('url test', () => {
+
+        cy.url().should('include', 'playground')
+        
+    });
+
+});
