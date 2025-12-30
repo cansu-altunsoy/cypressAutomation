@@ -15,7 +15,7 @@ describe('Cypress Komutlari', () => {
     });
 
 
-    it('cy.title komutlari', () => {
+    it.skip('cy.title komutlari', () => { // skip komutu bu testin es gecilmesini saglar
 
         cy.visit('/')  // baseUrl adresine gider
 
@@ -26,15 +26,17 @@ describe('Cypress Komutlari', () => {
     });
 
 
-    it('cy.url ve cy.location komutlari', () => {
+    it('cy.url ve cy.location komutlari', () => { // onl komutu sadece o testin calismasini saglar
  
         cy.visit('/')  // baseUrl adresine gider
 
         cy.url().should('equals' , 'https://uitestingplayground.com/' ) // url tam esitlik kontorlu saglar
         cy.url().should('include' , 'uitestingplayground' ) // url istenilen string ifadeyi iceriyor mu kontrolu saglar
 
+        cy.location('pathname', '/resources')
 
-        
     });
+    
    
+
 });
